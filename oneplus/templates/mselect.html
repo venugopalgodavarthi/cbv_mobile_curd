@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <tr><th>Mobile series</th><th>Mobile name</th><th>Mobile price</th>
+            <th>Mobile ram </th><th>Mobile rom </th><th>Mobile pro</th><th>Mobile desc</th></tr>
+
+            {%for i in res%}
+            <tr><th>{{i.mseries}}</th><th>{{i.mname}}</th><th>{{i.mprice}}</th>
+                <th>{{i.mram}}</th><th>{{i.mrom}}</th>
+                <th>{{i.mpro}}</th><th>{{i.mdesc}}</th>
+                <td><a href="{% url 'oneplus:mupdate' pk=i.id %}">update</a></td>
+                <td><a href="{% url 'oneplus:mdelete' pk=i.id %}">delete</a></td>
+                <td><a href="{% url 'oneplus:mdetail' pk=i.id %}">detail</a></td>
+            </tr>
+            {%endfor%}
+    </table>
+</body>
+</html>

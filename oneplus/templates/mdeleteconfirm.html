@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {%csrf_token%}
+        <input type="submit" value="delete">
+    </form>
+    <table border="2">
+        <tr><th>Mobile series</th><th>Mobile name</th><th>Mobile price</th>
+            <th>Mobile ram </th><th>Mobile rom </th><th>Mobile pro</th>
+            <th>Mobile desc</th></tr>
+            <tr><th>{{i.mseries}}</th><th>{{i.mname}}</th><th>{{i.mprice}}</th>
+                <th>{{i.mram}}</th><th>{{i.mrom}}</th><th>{{i.mpro}}</th>
+                <th>{{i.mdesc}}</th></tr>
+    
+    </table>
+</body>
+</html>
